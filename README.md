@@ -1,6 +1,10 @@
-# Salesforce DX Project: Next Steps
+# Proposal Management Salesforce App
 
-Now that you’ve created a Salesforce DX project, what’s next? Here are some documentation resources to get you started.
+Planned scope for this project includes:
+- Proposal create/read/update/comment/upvote
+- Proposal promotion process (i.e. New, Under Review, Accepted, Rejected, etc.)
+- Conversion of accepted proposal into a Project
+- Management of projects including team assignment and other standard PM stuff (TBD)
 
 ## How Do You Plan to Deploy Your Changes?
 
