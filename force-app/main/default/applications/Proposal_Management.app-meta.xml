@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <brand>
+        <headerColor>#416290</headerColor>
+        <logo>proposal_icon</logo>
+        <logoVersion>1</logoVersion>
+        <shouldOverrideOrgTheme>false</shouldOverrideOrgTheme>
+    </brand>
+    <description>Management of proposals from ideation to execution</description>
+    <formFactors>Small</formFactors>
+    <formFactors>Large</formFactors>
+    <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
+    <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
+    <label>Proposal Management</label>
+    <navType>Standard</navType>
+    <tabs>Proposal__c</tabs>
+    <uiType>Lightning</uiType>
+    <utilityBar>Proposal_Management_UtilityBar</utilityBar>
+</CustomApplication>

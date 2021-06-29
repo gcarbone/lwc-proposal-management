@@ -1,0 +1,41 @@
+<template>
+
+	<div class="app slds-p-around_xx-small">
+	<lightning-card >
+	<div slot="title">
+		<h1  class="slds-text-heading_large">{prop.Name}</h1>
+		<lightning-badge label={prop.Stage__c} icon-name="custom:custom11"></lightning-badge>
+        
+	</div>
+    
+	<div slot="actions">
+        
+        <lightning-icon  class="pointer" onclick={upVote} icon-name="standard:endorsement" alternative-text="Endorsement" title="Endorsement"></lightning-icon>
+        <lightning-button data-id="upvotes" label={prop.Upvotes__c}></lightning-button>
+        
+	</div>
+	<div class="wrapper">
+        <div class="slds-border_top divider">
+        <div class="box">   
+            <template if:false={editMode}>
+                <lightning-icon   class="float_icon pointer" onclick={handleEditClick} icon-name="action:edit" size="small" alternative-text="Edit" title="Edit"></lightning-icon>
+                
+                <lightning-formatted-rich-text
+                value={prop.Synopsis__c}>
+                </lightning-formatted-rich-text>
+            <pre class="spacer">&nbsp;</pre>
+            </template>
+            <template if:true={editMode}>
+                <lightning-icon   class="float_icon pointer" onclick={handleSaveClick} icon-name="action:approval" size="small" alternative-text="Save" title="Save"></lightning-icon>
+                
+                <lightning-input-rich-text data-id="synopsis"
+                value={prop.Synopsis__c}>
+                </lightning-input-rich-text>
+                <pre class="spacer">&nbsp;</pre>
+            </template>
+        </div>
+    </div>
+	</div>	
+	</lightning-card>
+	</div>	 
+</template>

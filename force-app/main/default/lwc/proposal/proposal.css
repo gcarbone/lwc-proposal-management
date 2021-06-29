@@ -1,0 +1,32 @@
+.slds-text-heading_large{
+    color: #8b9ae3;
+}
+.slds-badge {
+
+    color: white;
+    background: #8b9ae3
+  }
+
+.slds-card {
+    width: 100%;
+    display: flex;
+}
+
+.divider {
+    width:100%
+}
+
+.wrapper {
+    display: flex;
+  }
+
+.float_icon {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    z-index:100
+  }
+
+.spacer {
+    font-size: 12;
+}
