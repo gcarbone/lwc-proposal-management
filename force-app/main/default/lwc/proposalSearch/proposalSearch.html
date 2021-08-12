@@ -1,8 +1,47 @@
 <template>
-    <lightning-datatable
+    <lightning-layout horizontal-align="end">
+        <lightning-layout-item >
+            <p style="font-size: 12;">&nbsp;</p>
+        <lightning-button 
+        label="New Proposal" 
+        title="Non-primary action" 
+        onclick={handleNewButton} 
+        class="slds-m-left_x-small" >
+        </lightning-button>    
+    </lightning-layout-item>
+        <lightning-layout-item >
+                <p style="font-size: 12;">&nbsp;</p>
+                <lightning-input
+                variant="label-hidden"
+                name="namesearch"
+                label="search"
+                placeholder="Search by Name"
+                type="search"
+                oncommit={handleNamesearchChange}>
+                </lightning-input>
+        </lightning-layout-item>
+        <lightning-layout-item >
+            <lightning-combobox
+                name="stage"
+                placeholder="All Stages"
+                value={stageValue}
+                onchange={handleStageChange}
+                options={stageOptions}>
+            </lightning-combobox>
+        </lightning-layout-item>
+
+        </lightning-layout>
+        <lightning-datatable
                 key-field="id"
-                data={data}
+                data={columndata}
                 columns={columns}
-                onrowaction={handleRowAction}>
+                onrowaction={handleRowAction}
+                hide-checkbox-column="true">
         </lightning-datatable>
+        <template if:true={showRecordDetail}>
+
+                            <c-proposal prop={record} onclosedetail={closeDetail}></c-proposal>
+                        
+        </template>
+
 </template>
